@@ -1,0 +1,29 @@
+{
+  "name": "neve-legacy",
+  "version": "1.0.0",
+  "description": "Plugin that brings back the legacy style for Neve",
+  "main": "index.js",
+  "scripts": {
+    "watch:css": "grunt watch",
+    "build:css": "grunt sass && grunt cssmin",
+    "dist": "bash ./bin/dist.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristian-ungureanu/neve-legacy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristian-ungureanu/neve-legacy/issues"
+  },
+  "homepage": "https://github.com/cristian-ungureanu/neve-legacy#readme",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "load-project-config": "^0.2.1",
+    "node-sass": "^8.0.0"
+  }
+}
