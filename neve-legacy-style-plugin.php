@@ -23,7 +23,7 @@ if ( 'Neve' !== wp_get_theme()->name ) {
 	return;
 }
 
-require NEVE_LEGACY_PATH . '/vendor/autoload.php';
+require NEVE_LEGACY_PATH . 'vendor/autoload.php';
 add_action(
 	'after_setup_theme',
 	function() {
