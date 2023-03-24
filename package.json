@@ -1,5 +1,5 @@
 {
-  "name": "neve-legacy",
+  "name": "neve-legacy-style-plugin",
   "version": "1.0.0",
   "description": "Plugin that brings back the legacy style for Neve",
   "main": "index.js",
