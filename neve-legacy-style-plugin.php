@@ -7,9 +7,6 @@
  * Author: ThemeIsle
  * Author URI: https://themeisle.com
  **/
-
-use Neve_Legacy\Load_Legacy;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -23,11 +20,21 @@ if ( 'Neve' !== wp_get_theme()->name ) {
 	return;
 }
 
-require NEVE_LEGACY_PATH . 'vendor/autoload.php';
 add_action(
 	'after_setup_theme',
 	function() {
-		$legacy = new Load_Legacy();
-		$legacy->init();
+		add_action( 'wp_enqueue_scripts', 'enqueue_scripts', 0, PHP_INT_MIN );
 	}
 );
+
+/**
+ * Enqueue the legacy style.
+ */
+function enqueue_scripts() {
+
+	// Neve main Legacy Style.
+	wp_register_style( 'neve-legacy-style', NEVE_LEGACY_URL . '/assets/css/style-legacy.min.css', array(), NEVE_LEGACY_VERSION );
+	wp_style_add_data( 'neve-legacy-style', 'rtl', 'replace' );
+	wp_style_add_data( 'neve-legacy-style', 'suffix', '.min' );
+	wp_enqueue_style( 'neve-legacy-style' );
+}
