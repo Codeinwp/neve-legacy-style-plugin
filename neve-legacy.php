@@ -3,7 +3,7 @@
  * Plugin Name: Neve Legacy Style
  * Plugin URI: https://themeisle.com
  * Description: This plugin is used to add legacy support for Neve theme.
- * Version: 0.1
+ * Version: 1.0.0
  * Author: ThemeIsle
  * Author URI: https://themeisle.com
  **/
