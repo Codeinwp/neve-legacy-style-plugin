@@ -12,8 +12,9 @@ class Load_Legacy {
 	 * Init function.
 	 */
 	public function init() {
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_gutenberg_scripts' ] );
+		// Enqueue Legacy Styles first with a low priority so they could be overwritten by the new style.
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ], 0, PHP_INT_MIN );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_gutenberg_scripts' ], 0, PHP_INT_MIN );
 	}
 
 	/**
