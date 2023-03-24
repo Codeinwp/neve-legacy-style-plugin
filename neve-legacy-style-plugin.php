@@ -11,12 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NEVE_LEGACY_VERSION', '0.1' );
+define( 'NEVE_LEGACY_VERSION', '1.0.0' );
 define( 'NEVE_LEGACY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NEVE_LEGACY_URL', plugin_dir_url( __FILE__ ) );
 
-// Check if the Neve theme is active.
-if ( 'Neve' !== wp_get_theme()->name ) {
+// Check if the Neve theme or one of its child themes is active.
+$theme = get_template();
+if ( $theme !== 'neve' ) {
 	return;
 }
 
