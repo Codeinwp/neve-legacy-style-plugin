@@ -7,6 +7,7 @@
  * Author: ThemeIsle
  * Author URI: https://themeisle.com
  **/
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
